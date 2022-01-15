@@ -4,10 +4,11 @@ import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeli
 import 'react-vertical-timeline-component/style.min.css'
 import Chip from '@mui/material/Chip'
 import Slider from 'react-slick'
-
 import WorkIcon from '@material-ui/icons/Work'
 import SchoolIcon from '@material-ui/icons/School'
-import StarIcon from '@material-ui/icons/Star'
+import Link from 'next/link'
+
+import Image from '../components/Image'
 
 const DEFAULT_LAYOUT = 'AuthorLayout'
 
@@ -44,8 +45,6 @@ export default function About({ authorDetails }) {
         <VerticalTimeline layout="1-column-left">
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-            contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
             date="May 2019 - present"
             iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
             icon={<WorkIcon />}
@@ -61,22 +60,33 @@ export default function About({ authorDetails }) {
               improve overall development experience and making the codebase healthy.
             </p>
             <div className="my-2">
-              <Chip label="ReactJS" size="small" variant="outlined" className="mx-1" />
-              <Chip label="Typescript" size="small" variant="outlined" className="mx-1" />
-              <Chip label="NodeJS" size="small" variant="outlined" className="mx-1" />
-              <Chip label="Express" size="small" variant="outlined" className="mx-1" />
-              <Chip label="MongoDB" size="small" variant="outlined" className="mx-1" />
-              <Chip label="Webpack" size="small" variant="outlined" className="mx-1" />
-              <Chip label="Lerna" size="small" variant="outlined" className="mx-1" />
-              <Chip label="Storybook" size="small" variant="outlined" className="mx-1" />
-              <Chip label="Jest" size="small" variant="outlined" className="mx-1" />
-              <Chip label="React Testing Library" size="small" variant="outlined" />
+              <Chip label="ReactJS" size="small" variant="outlined" className="mr-1 mb-1" />
+              <Chip label="Typescript" size="small" variant="outlined" className="mr-1 mb-1" />
+              <Chip label="NodeJS" size="small" variant="outlined" className="mr-1 mb-1" />
+              <Chip label="Express" size="small" variant="outlined" className="mr-1 mb-1" />
+              <Chip label="MongoDB" size="small" variant="outlined" className="mr-1 mb-1" />
+              <Chip label="Webpack" size="small" variant="outlined" className="mr-1 mb-1" />
+              <Chip label="Lerna" size="small" variant="outlined" className="mr-1 mb-1" />
+              <Chip label="Storybook" size="small" variant="outlined" className="mr-1 mb-1" />
+              <Chip label="Jest" size="small" variant="outlined" className="mr-1 mb-1" />
+              <Chip
+                label="React Testing Library"
+                size="small"
+                variant="outlined"
+                className="mr-1 mb-1"
+              />
+              <Chip label="JSS" size="small" variant="outlined" className="mr-1 mb-1" />
+              <Chip
+                label="Styled Components"
+                size="small"
+                variant="outlined"
+                className="mr-1 mb-1"
+              />
+              <Chip label="TailwindCSS" size="small" variant="outlined" className="mr-1 mb-1" />
             </div>
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-            contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
             date="April 2018 - April 2019"
             iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
             icon={<WorkIcon />}
@@ -88,7 +98,12 @@ export default function About({ authorDetails }) {
               applications. Participate in design planning and decisions to deliver the best user
               experience.
             </p>
-            <p>Tools: AngularJS, Angular2+, Jasmine, Chai</p>
+            <div className="my-2">
+              <Chip label="AngularJS" size="small" variant="outlined" className="mr-1 mb-1" />
+              <Chip label="Angular2+" size="small" variant="outlined" className="mr-1 mb-1" />
+              <Chip label="Jasmine" size="small" variant="outlined" className="mr-1 mb-1" />
+              <Chip label="Chai" size="small" variant="outlined" className="mr-1 mb-1" />
+            </div>
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
@@ -105,10 +120,14 @@ export default function About({ authorDetails }) {
               practices such as test driven development, autonomous integration, and automatic
               release and build.
             </p>
-            <p>
-              Tools: React.JS, Typescript, Redux, React Redux, Javascript, HTML5, with CSS with test
-              driven development tools like Mocha and Chai.
-            </p>
+            <div className="my-2">
+              <Chip label="ReactJS" size="small" variant="outlined" className="mr-1 mb-1" />
+              <Chip label="Typescript" size="small" variant="outlined" className="mr-1 mb-1" />
+              <Chip label="Redux" size="small" variant="outlined" className="mr-1 mb-1" />
+              <Chip label="React Redux" size="small" variant="outlined" className="mr-1 mb-1" />
+              <Chip label="Mocha" size="small" variant="outlined" className="mr-1 mb-1" />
+              <Chip label="Chai" size="small" variant="outlined" className="mr-1 mb-1" />
+            </div>
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
@@ -123,9 +142,13 @@ export default function About({ authorDetails }) {
               Denmark. Responsible for backend and frontend development using Laravel 4 and PHP
               technologies.
             </p>
-            <p>Tools: PHP Laravel, Javascript, CSS, HTML.</p>
+            <div className="my-2">
+              <Chip label="PHP" size="small" variant="outlined" className="mr-1 mb-1" />
+              <Chip label="Laravel" size="small" variant="outlined" className="mr-1 mb-1" />
+              <Chip label="JQuery" size="small" variant="outlined" className="mr-1 mb-1" />
+              <Chip label="AngularJS" size="small" variant="outlined" className="mr-1 mb-1" />
+            </div>
           </VerticalTimelineElement>
-
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
             date="May 2014 - December 2015"
@@ -138,7 +161,12 @@ export default function About({ authorDetails }) {
               Responsible for developing Wordpress and PHP driven websites and creating great user
               interfaces and widgets. Responsible for maintaining existing Wordpress sites.
             </p>
-            <p>Tools: PHP Laravel Wordpress, Javascript, CSS, HTML.</p>
+            <div className="my-2">
+              <Chip label="PHP" size="small" variant="outlined" className="mr-1 mb-1" />
+              <Chip label="Laravel" size="small" variant="outlined" className="mr-1 mb-1" />
+              <Chip label="Wordpress" size="small" variant="outlined" className="mr-1 mb-1" />
+              <Chip label="Javascript" size="small" variant="outlined" className="mr-1 mb-1" />
+            </div>
           </VerticalTimelineElement>
           {/* Php Drafting Zone */}
           <VerticalTimelineElement
@@ -154,12 +182,16 @@ export default function About({ authorDetails }) {
               HTML. Analyze the processes given by the clients and apply/include it to the system
               requirements. Write code and implement the listed requirements.
             </p>
-            <p>Tools: PHP Laravel, Javascript, CSS, HTML.</p>
+            <div className="my-2">
+              <Chip label="PHP" size="small" variant="outlined" className="mr-1 mb-1" />
+              <Chip label="CodeIgniter" size="small" variant="outlined" className="mr-1 mb-1" />
+              <Chip label="Javascript" size="small" variant="outlined" className="mr-1 mb-1" />
+            </div>
           </VerticalTimelineElement>
           {/* Education */}
           <VerticalTimelineElement
             className="vertical-timeline-element--education"
-            date="2008 - 2012"
+            date="June 2008 - April 2012"
             iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
             icon={<SchoolIcon />}
           >
@@ -172,31 +204,51 @@ export default function About({ authorDetails }) {
               organization that produce yearbook to incoming graduates. Lead a team for 2 years and
               published an interactive yearbook application using Adobe Flash and ActionScript.
             </p>
+            <div className="my-2">
+              <Chip
+                label="ActionScript 3.0"
+                size="small"
+                variant="outlined"
+                className="mr-1 mb-1"
+              />
+              <Chip label="Adobe Flash" size="small" variant="outlined" className="mr-1 mb-1" />
+            </div>
           </VerticalTimelineElement>
         </VerticalTimeline>
       </div>
-      <div>
-        <h2> Single Item</h2>
-        <Slider {...settings}>
-          <div>
-            <h3>1</h3>
+      <div className="mt-20">
+        <div className="text-center mb-10">
+          <h3 className="text-4xl font-bold leading-8 tracking-tight mb-5">Side Projects</h3>
+          <p>Compilations of my side and personal projects.</p>
+        </div>
+        <div className="grid grid-cols-6 gap-4">
+          <div className="col-start-2 col-span-4">
+            <Slider {...settings}>
+              <div className="slider-item slider-card">
+                <Link href="https://balancingacct.com/" passHref>
+                  <Image
+                    alt="BalancingAcct preview"
+                    src="/static/images/balancing-acct.png"
+                    className="object-cover object-center lg:h-48 md:h-36 cursor-pointer rounded-md"
+                    layout="responsive"
+                    width={544}
+                    height={306}
+                  />
+                </Link>
+                <h3>
+                  <Link href="https://balancingacct.com/">BalancingAcct</Link>
+                </h3>
+                <p className="mt-3">
+                  Elegant and clean informative bookkeeping services for an Australian client.
+                </p>
+                <p className="mt-3">
+                  <Chip className="mr-2" label="NextJS" />
+                  <Chip className="mr-2" label="MaterialUI" />
+                </p>
+              </div>
+            </Slider>
           </div>
-          <div>
-            <h3>2</h3>
-          </div>
-          <div>
-            <h3>3</h3>
-          </div>
-          <div>
-            <h3>4</h3>
-          </div>
-          <div>
-            <h3>5</h3>
-          </div>
-          <div>
-            <h3>6</h3>
-          </div>
-        </Slider>
+        </div>
       </div>
     </div>
   )
